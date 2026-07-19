@@ -1,0 +1,21 @@
+# parser permissiveness vs canonical formatter
+position startpos moves => position startpos
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1 moves => position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1
+go searchmoves 7g7f 2g2f depth 10 => go depth 10 searchmoves 7g7f 2g2f
+go depth 1 btime 2 wtime 3 byoyomi 4 binc 5 winc 6 movetime 7 movestogo 8 nodes 9 mate infinite ponder local extra => go ponder btime 2 wtime 3 byoyomi 4 binc 5 winc 6 movetime 7 movestogo 8 depth 1 nodes 9 mate infinite local extra
+go depth 1 depth 2 => go depth 2
+setoption name EvalFile value => setoption name EvalFile value
+setoption name EvalFile value path with spaces/file.nnue
+setoption name Threads value 1
+setoption name Threads value 4
+
+# option canonicalization and extras retention
+option name Selectivity type spin max 4 default 2 min 0 => option name Selectivity type spin default 2 min 0 max 4
+option name EnteringKingRule type combo var TryRule default 27 var Win => option name EnteringKingRule type combo default 27 var TryRule var Win
+option name Experimental type fancy default on note unstable => option name Experimental type fancy default on note unstable
+
+# info extras stay stringly while typed fields move to canonical slots
+info cpuload 87 currline 1 7g7f 3c3d score cp 12 nodes 100 pv 7g7f 3c3d => info nodes 100 score cp 12 cpuload 87 currline 1 7g7f 3c3d pv 7g7f 3c3d
+info multipv 2 score cp 156 lowerbound hashfull 104 => info hashfull 104 multipv 2 score cp 156 lowerbound
+info hashfull 104 score cp -34 upperbound => info hashfull 104 score cp -34 upperbound
+info refutation 7g7f 3c3d currline 1 7g7f string solver busy => info refutation 7g7f 3c3d currline 1 7g7f string solver busy

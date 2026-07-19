@@ -1,0 +1,11 @@
+# parse_line accepts these, but parse_line_strict rejects them because they canonicalize differently
+position startpos moves
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1 moves
+go searchmoves 7g7f 2g2f depth 10
+go depth 1 btime 2 wtime 3 byoyomi 4 binc 5 winc 6 movetime 7 movestogo 8 nodes 9 mate infinite ponder local extra
+go depth 1 depth 2
+go searchmoves depth 10
+option name Selectivity type spin max 4 default 2 min 0
+option name EnteringKingRule type combo var TryRule default 27 var Win
+info cpuload 87 currline 1 7g7f 3c3d score cp 12 nodes 100 pv 7g7f 3c3d
+info multipv 2 score cp 156 lowerbound hashfull 104

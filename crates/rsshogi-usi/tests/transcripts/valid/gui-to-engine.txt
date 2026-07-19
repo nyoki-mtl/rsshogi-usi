@@ -1,0 +1,36 @@
+# standard commands
+usi
+isready
+usinewgame
+stop
+quit
+ponderhit
+ponderhit btime 37082 wtime 23103 byoyomi 10000
+gameover win
+gameover lose
+gameover draw
+gameover aborted
+
+# setoption
+setoption name USI_Hash value 256
+setoption name BookFile
+setoption name EvalFile value path with spaces/file.nnue
+setoption name EvalFile value
+setoption name Threads value 1
+setoption name Threads value 4
+
+# position
+position startpos
+position startpos moves 7g7f 3c3d
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1 moves 7g7f
+
+# go
+go
+go btime 1000 wtime 2000 byoyomi 3000
+go depth 12 nodes 100000
+go mate 5
+go mate infinite
+go searchmoves 7g7f mate infinite => go mate infinite searchmoves 7g7f
+go ponder searchmoves 7g7f 2g2f
+go infinite

@@ -1,0 +1,32 @@
+# engine responses
+id name rshogi-nnue
+id author T-K
+usiok
+readyok
+bestmove 7g7f
+bestmove 8h2b+ ponder 3a2b
+bestmove resign
+bestmove win
+
+# option
+option name UseBook type check default true
+option name Selectivity type spin default 2 min 0 max 4
+option name Style type combo default Normal var Solid var Normal var Risky
+option name ClearHash type button
+option name LearningFile type filename default <empty>
+
+# info
+info depth 5 seldepth 8
+info time 1141 depth 3 nodes 135125 score cp -1521 pv 3a3b L*4h 4c4d => info depth 3 time 1141 nodes 135125 score cp -1521 pv 3a3b L*4h 4c4d
+info nodes 120000 nps 116391 hashfull 104 => info nodes 120000 nps 116391 hashfull 104
+info score mate + nodes 999 string solved => info nodes 999 score mate + string solved
+info score cp 156 multipv 1 pv P*5h 4g5g 5h5g 8b8f => info multipv 1 score cp 156 pv P*5h 4g5g 5h5g 8b8f
+info score cp -34 upperbound currmove 7g7f => info score cp -34 upperbound currmove 7g7f
+info multipv 2 score cp 156 lowerbound hashfull 104 => info hashfull 104 multipv 2 score cp 156 lowerbound
+info hashfull 104 score cp -34 upperbound => info hashfull 104 score cp -34 upperbound
+
+# checkmate
+checkmate G*8f 9f9g 8f8g 9g9h 8g8h
+checkmate notimplemented
+checkmate timeout
+checkmate nomate

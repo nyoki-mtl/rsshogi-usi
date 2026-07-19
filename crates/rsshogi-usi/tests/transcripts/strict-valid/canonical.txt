@@ -1,0 +1,14 @@
+# canonical lines accepted by parse_line_strict
+position startpos
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1
+go depth 10 searchmoves 7g7f 2g2f
+go ponder btime 2 wtime 3 byoyomi 4 binc 5 winc 6 movetime 7 movestogo 8 depth 1 nodes 9 mate infinite local extra
+setoption name EvalFile value
+option name Selectivity type spin default 2 min 0 max 4
+option name EnteringKingRule type combo default 27 var TryRule var Win
+info nodes 100 score cp 12 cpuload 87 currline 1 7g7f 3c3d pv 7g7f 3c3d
+info hashfull 104 multipv 2 score cp 156 lowerbound
+info hashfull 104 multipv 2 score cp -34 upperbound currmove 7g7f
+info hashfull 104
+info refutation 7g7f 3c3d currline 1 7g7f string solver busy
+test_movegen captures

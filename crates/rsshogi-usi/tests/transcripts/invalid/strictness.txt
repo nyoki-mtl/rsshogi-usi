@@ -1,0 +1,25 @@
+# invalid commands
+unknown
+position
+position sfen only three fields
+position startpos bogus
+setoption
+setoption value 1
+go btime nope
+go mate
+go mate nope
+usi extra
+gameover
+gameover win extra
+id name
+option name Threads
+option name Threads type spin min nope
+option name Threads type spin default
+bestmove
+bestmove 7g7f bogus
+info score cp
+info score bogus 1
+checkmate
+checkmate timeout extra
+checkmate notimplemented extra
+checkmate nomate extra

@@ -1,0 +1,3 @@
+# lines that parse canonically but should be rejected by portability validation
+setoption name Multi Word Name value path/to/file.nnue
+option name Clear Hash type button

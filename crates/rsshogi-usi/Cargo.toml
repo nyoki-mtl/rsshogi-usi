@@ -1,0 +1,17 @@
+[package]
+name = "rsshogi-usi"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.95"
+description = "Engine-agnostic USI protocol command model, parser, and formatter"
+documentation = "https://docs.rs/rsshogi-usi"
+homepage = "https://nyoki-mtl.github.io/rsshogi-usi/"
+license = "MIT"
+repository = "https://github.com/nyoki-mtl/rsshogi-usi"
+readme = "../../README.md"
+keywords = ["shogi", "usi", "protocol"]
+categories = ["parser-implementations", "games"]
+
+[lib]
+name = "rsshogi_usi"
+path = "src/lib.rs"

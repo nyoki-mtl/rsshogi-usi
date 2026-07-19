@@ -1,0 +1,7 @@
+:root {
+  --rshogi-nnue-accent: #3d5af1;
+}
+
+.mdbook-header a:hover {
+  color: var(--rshogi-nnue-accent);
+}

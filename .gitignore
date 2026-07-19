@@ -1,0 +1,19 @@
+# Rust
+/target
+**/target
+debug
+docs/book/build/
+**/*.rs.bk
+*.pdb
+
+
+# Local tooling
+.kiro/
+.serena/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/

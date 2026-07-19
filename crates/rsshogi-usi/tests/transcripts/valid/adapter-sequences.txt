@@ -1,0 +1,33 @@
+# consumer-oriented sequences
+# Each line is still parsed independently. The file order is documentation, not a shared session test.
+
+# startup handshake
+usi
+id name minimal-engine
+id author rshogi contributors
+option name Hash type spin default 16 min 1 max 1048576
+option name USI_Ponder type check default false
+usiok
+setoption name Hash value 128
+setoption name USI_Ponder value true
+isready
+readyok
+
+# normal search flow
+usinewgame
+position startpos moves 7g7f 3c3d
+go btime 1000 wtime 1000 byoyomi 200
+info string stub search policy lives in adapter
+bestmove resign
+
+# mate-oriented branch
+position sfen lnsgkgsnl/1r5b1/p1pppp1pp/6p2/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 1
+go mate infinite
+checkmate notimplemented
+
+# one plausible stop policy for a simple stub
+position startpos
+go infinite
+stop
+bestmove resign
+quit

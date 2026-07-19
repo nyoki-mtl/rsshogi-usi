@@ -1,0 +1,6 @@
+# canonical + portable lines for ShogiHome-oriented validation
+ponderhit
+ponderhit btime 37082 wtime 23103 byoyomi 10000
+setoption name EvalFile value path with spaces/file.nnue
+option name ClearHash type button
+option name LearningFile type filename default <empty>
